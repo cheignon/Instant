@@ -28,4 +28,22 @@ class Article: Codable {
         self.publishedAt = publishedAt
         self.content = content
     }
+    
+    func convertPublishAtToDate() -> Date? {
+        let dateFormatterInput = DateFormatter()
+        let dateFormatterOutput = DateFormatter()
+        
+        if let stringDate = self.publishedAt {
+            dateFormatterInput.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+            guard let date = dateFormatterInput.date(from: stringDate) else { return nil }
+            return date
+        }
+        return nil
+    }
+}
+
+extension Article: Equatable {
+    static func == (lhs: Article, rhs: Article) -> Bool {
+        return lhs.source == rhs.source && lhs.url == rhs.url && lhs.title == rhs.title
+    }
 }

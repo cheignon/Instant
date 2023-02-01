@@ -26,5 +26,6 @@
 
 - creat mock class to make UnitTest
 - paging to make inifity scroll
-- Unit Test ( but i can do if you want )
 - Protect data like ApiKey
+- Localisé les text fr erg etc..
+- I don't found more unite test so maybe to be improve

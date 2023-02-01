@@ -11,7 +11,6 @@ class DetailTitleTableViewCell: UITableViewCell {
 
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
-    let dateFormatterInput = DateFormatter()
     let dateFormatterOutput = DateFormatter()
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -37,13 +36,10 @@ class DetailTitleTableViewCell: UITableViewCell {
     ///    - article:  ``Article`` Object, this dat permit to file text on this cell
     func setupLabelWith(article: Article) {
         self.titleLabel.text = article.title
-        if let stringDate = article.publishedAt {
-            self.dateFormatterInput.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-            guard let date = self.dateFormatterInput.date(from: stringDate) else { return }
+        if let date = article.convertPublishAtToDate() {
             self.dateFormatterOutput.dateFormat = "dd MMMM yyyy"
             let newDateString = self.dateFormatterOutput.string(from: date)
             self.dateLabel.text = newDateString
-
         }
     }
 

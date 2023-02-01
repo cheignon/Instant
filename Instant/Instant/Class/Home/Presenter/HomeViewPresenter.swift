@@ -21,7 +21,7 @@ class HomeViewPresenter: HomeViewTheViewCommunicateToPresenterProtocol {
     }
     
     func loadOrRefreshIfNeeded() {
-        //self.interactor.
+        self.interactor?.loadOrRefreshIfNeeded()
     }
     
     func numberOfRowsInSection() -> Int {
@@ -40,33 +40,24 @@ class HomeViewPresenter: HomeViewTheViewCommunicateToPresenterProtocol {
         }
         self.router?.presentDetailView(view: homeViewcontroller, article: article)
     }
-    
-    func deselectRowAt(index: IndexPath) {
-        
-
-    }
-    
 }
 
 
 extension HomeViewPresenter: HomeViewPresentComunnicateToViewProtocol {
     func onFetchNewsSuccess(result: Result) {
-        
+        self.result = result
+        self.view?.onFetchNewsSuccess(result: result)
     }
     
     func onFetchNewsFailure(error: AFError) {
-    
+        self.view?.onFetchNewsFailure(error: error)
     }
     
     
 }
 
 extension HomeViewPresenter: HomeViewInteractorCommunicateToPresenterProtocol {
-    
-    func viewWillAppear() {
-        self.interactor?.loadOrRefreshIfNeeded()
-    }
-    
+
     func getNewsFailure(error: Alamofire.AFError) {
         self.view?.onFetchNewsFailure(error: error)
     }

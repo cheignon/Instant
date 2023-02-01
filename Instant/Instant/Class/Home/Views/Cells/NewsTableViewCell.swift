@@ -13,7 +13,6 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var previewImageView: UIImageView!
-    let dateFormatterInput = DateFormatter()
     let dateFormatterOutput = DateFormatter()
 
     override func awakeFromNib() {
@@ -42,13 +41,10 @@ class NewsTableViewCell: UITableViewCell {
         self.titleLabel.text = article.title
         self.descriptionLabel.text = article.description ?? article.content
         
-        if let stringDate = article.publishedAt {
-            self.dateFormatterInput.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-            guard let date = self.dateFormatterInput.date(from: stringDate) else { return }
+        if let date = article.convertPublishAtToDate() {
             self.dateFormatterOutput.dateFormat = "dd MMM yyyy"
             let newDateString = self.dateFormatterOutput.string(from: date)
             self.dateLabel.text = newDateString
-
         }
     }
     

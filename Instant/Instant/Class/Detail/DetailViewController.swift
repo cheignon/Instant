@@ -44,14 +44,6 @@ class DetailViewController: UIViewController {
 
 
 extension DetailViewController: DetailViewPresenterCommunicateToViewProtocol {
-    func fetchImageFromURLSuccess(image: UIImage) {
-        
-    }
-    
-    func fetchImageFromURLFailure(error: Alamofire.AFError) {
-        
-    }
-    
     
 }
 

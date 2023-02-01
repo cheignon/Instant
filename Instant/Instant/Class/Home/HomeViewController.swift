@@ -106,7 +106,7 @@ extension HomeViewController: UITableViewDataSource {
 
 extension HomeViewController: HomeViewPresentComunnicateToViewProtocol {
     func onFetchNewsFailure(error: AFError) {
-        self.presentAlertView(title: "Error", messsage: error.localizedDescription)
+        self.presentAlertView(title: "Erreur", messsage: error.localizedDescription)
     }
     
     func onFetchNewsSuccess(result: Result) {
@@ -117,12 +117,6 @@ extension HomeViewController: HomeViewPresentComunnicateToViewProtocol {
     func deselectRowAt(index: IndexPath) {
         self.presenter?.didSelectRowAt(index: index)
     }
-    
-    func viewWillAppear() {
-        
-    }
-    
-    
 }
 
 extension HomeViewController: UISearchBarDelegate {
@@ -135,7 +129,7 @@ extension HomeViewController: UISearchBarDelegate {
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
+        // i do that because i dont want make request for every char tapped
         searchingWorkItem?.cancel()
         
         

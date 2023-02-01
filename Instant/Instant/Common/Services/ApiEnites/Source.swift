@@ -16,3 +16,10 @@ class Source: Codable {
         self.name = name
     }
 }
+
+extension Source: Equatable {
+    static func == (lhs: Source, rhs: Source) -> Bool {
+        return lhs.name == lhs.name
+    }
+    
+}

@@ -13,8 +13,10 @@ class Result: Codable {
     var status: String
     var totalResults: Int?
     var articles: [Article]?
+    var message: String?
+    var code: String?
 
-    init(status: String, totalResults: Int?, articles: [Article]?) {
+    init(status: String, totalResults: Int?, articles: [Article]?, message: String?, code: String?) {
         self.status = status
         self.totalResults = totalResults
         self.articles = articles
@@ -25,5 +27,11 @@ class Result: Codable {
             return 0
         }
         return articles.count
+    }
+}
+
+extension Result: Equatable {
+    static func == (lhs: Result, rhs: Result) -> Bool {
+        return lhs.status == rhs.status && lhs.totalResults == rhs.totalResults && rhs.articles == lhs.articles
     }
 }

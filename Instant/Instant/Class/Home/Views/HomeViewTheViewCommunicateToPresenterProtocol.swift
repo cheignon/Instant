@@ -18,6 +18,5 @@ protocol HomeViewTheViewCommunicateToPresenterProtocol {
     func loadOrRefreshIfNeeded()
     func numberOfRowsInSection() -> Int
     func didSelectRowAt(index: IndexPath)
-    func deselectRowAt(index: IndexPath)
 
 }
