@@ -32,6 +32,7 @@ class DetailMoreInfoTableViewCell: UITableViewCell {
     // this function will configure the label inside the cell
     /// - parameters:
     ///    - article:  ``Article`` Object, this dat permit to file text on this cell
+    /// - Note: the label will be react lile a link
     func setupLabelWith(article: Article) {
         let labelTap = UITapGestureRecognizer(target: self, action: #selector(self.linkLabelTapped(_:)))
         self.urlLabel.isUserInteractionEnabled = true
