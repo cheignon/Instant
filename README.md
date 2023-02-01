@@ -21,3 +21,10 @@
 
 - display news of the day
 - search news with key word
+
+## improvment
+
+- creat mock class to make UnitTest
+- paging to make inifity scroll
+- Unit Test ( but i can do if you want )
+- Protect data like ApiKey
