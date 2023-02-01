@@ -29,3 +29,23 @@
 - Protect data like ApiKey
 - Localisé les text fr erg etc..
 - I don't found more unite test so maybe to be improve
+
+#@ issue 
+ - only half day to make the code ... so i'm sure on COPY/PAST in the CI/CD i'm bad
+ - the UI make me lose time but i want make simple but not ugly app sorry
+ - for unitTest except the model ... i don't found other unit test. i was started UI test but i thinnk it's too much
+ - i think i use to much ``guard`` on this app so sorry
+ - i try to make like a big project but i think it's will be incompressible for you... 
+ - i try too limite me with SPM else you will 15 line of code 
+
+## in real situation what i do normally
+- make dev target with dev provisioning profile
+- configure the CI file 
+- normally when you make iOS App you have Android App ... so I will setup localization file over the  air, then generate a generator file for images, color , etc like that we are in the same level about the guideline
+- i use RxSwift normally... but i saw the combine it's faster than Rx
+
+## thank for your watching
+- please if i not good for you can make me appointment to discuss about that because i want to learn 
+
+
+
