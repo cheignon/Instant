@@ -14,7 +14,7 @@
 - AlamofireImage:
     to optimize the cache for downloading ( sure it's not the best one ) but i need to make this test quickly so i take this one
 - Rate limite for research:
-    only 50 requests by days so change ApiKey if you need ...
+    ⚠️ only 50 requests by days so change ApiKey if you need ...
     and 100 request for free acount
     
 ## Features
