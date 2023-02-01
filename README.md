@@ -19,7 +19,7 @@
     
 ## Dont be affraid
 
-- i make very very long class and protocol name , it's for your understand how I'm coding, so normally the size of name's class or protocol it verry very very smaller thant 
+- i make very very long class and protocol name , it's for your understanding how I'm coding, so normally the size of name's class or protocol it verry very very smaller thant 
 what i do
     
 ## Features
