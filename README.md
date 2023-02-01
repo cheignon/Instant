@@ -17,6 +17,11 @@
     ⚠️ only 50 requests by days so change ApiKey if you need ...
     and 100 request for free acount
     
+## Dont be affraid
+
+- i make very very long class and protocol, it's for your understand how I'm coding, so normally the size of class or protocol it verry verry verry smaller thant 
+what i do
+    
 ## Features
 
 - display news of the day
