@@ -41,7 +41,7 @@ what i do
  - for unitTest except the model ... i don't found other unit test. i was started UI test but i thinnk it's too much
  - i think i use to much ``guard`` on this app so sorry
  - i try to make like a big project but i think it's will be incompressible for you... 
- - i try too limite me with SPM else you will 15 line of code 
+ - i try too limite me with SPM else you will see 15 lines of code 
 
 ## in real situation what i do normally
 - make dev target with dev provisioning profile
@@ -50,7 +50,7 @@ what i do
 - i use RxSwift normally... but i saw the combine it's faster than Rx
 
 ## thank for your watching
-- please if i not good for you can make me appointment to discuss about that because i want to learn 
+- please if i not good for you... Can make me appointment to discuss about that because i want to learn 
 
 
 
